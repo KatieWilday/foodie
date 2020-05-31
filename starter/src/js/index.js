@@ -22,7 +22,7 @@ window.state = state;
 const controlSearch = async () => {
   // 1. Get query from view
   const query = searchView.getInput();
-  console.log(query) //TODO
+  //console.log(query) //TODO
 
   if (query) {
     // 2. Create new search object add to state
@@ -39,7 +39,7 @@ const controlSearch = async () => {
       //5. Render results on UI
       clearLoader();
       searchView.renderResults(state.search.result);
-      console.log(state.search.result);
+      //console.log(state.search.result);
     } catch (err) {
       alert('Something wrong with the search...')
       clearLoader();
@@ -69,7 +69,7 @@ elements.searchResPages.addEventListener('click', e => {
 const controlRecipe = async () => {
     // Get ID from url
     const id = window.location.hash.replace('#', '');
-    console.log(id);
+    //console.log(id);
 
     if (id) {
         // Prepare UI for changes
@@ -85,7 +85,7 @@ const controlRecipe = async () => {
         try {
             // Get recipe data and parse ingredients
             await state.recipe.getRecipe();
-            console.log(state.recipe.ingredients);
+            //console.log(state.recipe.ingredients);
             state.recipe.parseIngredients();
 
             // Calculate servings and time
@@ -141,8 +141,7 @@ elements.shopping.addEventListener('click', e => {
 
 /** LIKE CONTROLLER **/
 //TESTING
-state.likes = new Likes();
-likesView.toggleLikeMenu(state.likes.getNumLikes())
+
 
 const controlLike = () => {
   if (!state.likes) state.likes = new Likes();
@@ -177,6 +176,19 @@ const controlLike = () => {
   likesView.toggleLikeMenu(state.likes.getNumLikes())
 }
 
+//Restore liked recipes on page load
+window.addEventListener('load', () => {
+  state.likes = new Likes();
+
+  //Restore likes
+  state.likes.readStorage();
+
+  //Toggle Like Menu Button
+  likesView.toggleLikeMenu(state.likes.getNumLikes());
+
+  //Render existing likes
+  state.likes.likes.forEach(like => likesView.renderLike(like));
+})
 
 // Handling Recipe button clicks
 elements.recipe.addEventListener('click', e => {
