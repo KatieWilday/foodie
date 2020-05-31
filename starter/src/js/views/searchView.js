@@ -5,6 +5,7 @@ export const getInput = () => elements.searchInput.value; //arrow functions don'
 export const clearInput = () => elements.searchInput.value = ' ';
 export const clearResults = () => elements.searchResultList.innerHTML = ' ';
 
+//algorithm
 const limitRecipeTitle = (title, limit = 17) => {
   const newTitle = []
     if (title.length > limit) {
