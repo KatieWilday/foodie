@@ -21,14 +21,14 @@ export default class Recipe {
   }
 
   calcTime() {
-    // Assuming that we need 15 min for each 3 ingredients
-    const numIng = this.ingredients.length;
-    const periods = Math.ceil(numIng / 3);
-    this.time = periods * 15;
+      // Assuming that we need 15 min for each 3 ingredients
+      const numIng = this.ingredients.length;
+      const periods = Math.ceil(numIng / 3);
+      this.time = periods * 15;
   }
 
-  calcServings(){
-    this.servings = 4;
+  calcServings() {
+      this.servings = 4;
   }
 
 
