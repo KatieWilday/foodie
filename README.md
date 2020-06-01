@@ -4,4 +4,4 @@ An recipe app drawn from an API. User can add, delete and adjust ingredients for
 
 Run bundle install 
 
-Run nmp start 
+Run npm start 
