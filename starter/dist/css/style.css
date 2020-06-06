@@ -19,7 +19,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: #403e3e;
-  background-image: linear-gradient(to right bottom, #fcde62, #d95102);
+  background-image: linear-gradient(to right top, #fcde62, #d95102);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: calc(100vh - 2 * 4vw); }
@@ -322,6 +322,8 @@ body {
       position: absolute;
       top: 0;
       left: 0;
+      background-image: linear-gradient(to right bottom, #fcde62, #d95102);
+      opacity: .4; }
   .recipe__img {
     width: 100%;
     display: block;
