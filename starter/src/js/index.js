@@ -44,7 +44,6 @@ const controlSearch = async () => {
       clearLoader();
     }
 
-
   }
 
 }

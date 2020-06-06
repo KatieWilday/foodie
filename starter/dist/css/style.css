@@ -321,9 +321,7 @@ body {
       width: 100%;
       position: absolute;
       top: 0;
-      left: 0;
-      background-image: linear-gradient(to right bottom, #fcde62, #d95102);
-      opacity: .4; }
+      left: 0; }
   .recipe__img {
     width: 100%;
     display: block;
