@@ -1,13 +1,8 @@
-fetch("https://tasty.p.rapidapi.com/tags/list", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "tasty.p.rapidapi.com",
-		"x-rapidapi-key": "acd05c5711msha05183ddac026c8p169ec7jsn414fc820b394"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.log(err);
-});
+import axios from 'axios';
+
+async function getResults(qeury) {
+  const key = 'acd05c5711msha05183ddac026c8p169ec7jsn414fc820b394'
+  const res = await axios(`https://rapidapi.com/brianiswu/api/recipe-puppy?key=${key}&q=${query}`)
+  console.log(res)
+}
+getResults();
