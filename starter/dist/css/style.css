@@ -163,7 +163,7 @@ body {
   justify-content: space-between; }
   .header__logo {
     position: absolute;
-    left: 180px;
+    left: 190px;
     height: 7rem;
     display: block; }
   .header__icon {
@@ -321,7 +321,7 @@ body {
       width: 100%;
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
   .recipe__img {
     width: 100%;
     display: block;
