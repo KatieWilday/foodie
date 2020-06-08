@@ -8,13 +8,6 @@ import * as listView from './views/listView'
 import * as likesView from './views/likesView'
 import { elements, renderLoader, clearLoader } from './views/base'
 
-/** Global State of the App
-* - Search object
-* - Current Recipe object
-* - Shopping List Oject
-* - Liked Recipes
-**/
-
 const state = {}
 
 /** SEARCH CONTROLLER **/
@@ -32,7 +25,7 @@ const controlSearch = async () => {
     renderLoader(elements.searchRes);
     try {
       // Search for recipes
-      await state.search.getResults(); //define as async to use await
+      await state.search.getResults();
 
       // Render results on UI
       clearLoader();
